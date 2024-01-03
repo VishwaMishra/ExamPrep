@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ExamserviceApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(ExamserviceApplication.class, args);
+		System.out.println("***** App Starting *****");
 	}
 
 }
