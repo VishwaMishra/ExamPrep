@@ -1,2 +1,2 @@
 # ExamPrep
-Exam portal application help for user to prepare for exam.
+Exam portal application is helping user to prepare for their interview exam.
