@@ -29,6 +29,7 @@ button{
     padding: 0 15px;
     width: 330px;
     margin-left: 30px;
+    font-weight: 700;
 }
 /* 
 ::ng-deep.mat-form-field.mat-focused .mat-form-field-ripple{
@@ -41,5 +42,5 @@ button{
 
   form p{
     font-size: 15px;
-    margin-left: 80px;
+    margin-left: 85px;
   }
