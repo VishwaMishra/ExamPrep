@@ -1,0 +1,19 @@
+h1{
+    color: #1877f2;
+    margin-top: 5%;
+    font-size: 32px;
+    font-weight: 700;
+}
+p{
+    color: #1877f2;
+    font-size: 25px;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 12%;
+    box-shadow: 10px 10px 10px lightblue;
+    
+}
