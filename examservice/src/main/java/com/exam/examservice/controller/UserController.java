@@ -5,8 +5,11 @@ import com.exam.examservice.entity.User;
 import com.exam.examservice.entity.UserRole;
 import com.exam.examservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -42,4 +45,9 @@ public class UserController {
     public void deleteUser(@PathVariable("userId") Long userId){
         this.userService.deleteUser(userId);
     }
+//
+//    @ExceptionHandler(UserNotFoundException.class)
+//    public <UserNotFoundException> ResponseEntity<?> excepetionHandler(UserNotFoundException ex){
+//        return new ResponseEntity<>;}
+
 }

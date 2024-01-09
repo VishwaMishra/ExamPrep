@@ -3,20 +3,22 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { UserService } from '../../services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
   imports: [MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private userService:UserService) {}
+  constructor(private _userService: UserService, private snack:MatSnackBar) {}
 
   public user={
     username:'',
@@ -26,15 +28,19 @@ export class SignUpComponent implements OnInit {
     email:'',
     phone:''
   }
+
   ngOnInit():void {}
 
 
   formSubmit(){
-    alert("Submitted Successfully");
     console.log(this.user);
 
     if(this.user.username=='' || this.user.username == null){
-      alert('Username is required!!');
+      this.snack.open("Username is required",'',{
+        duration:3000,
+        verticalPosition:'top'
+      });
+      //alert('Username is required!!');
       return;
     }
 
@@ -59,16 +65,20 @@ export class SignUpComponent implements OnInit {
     }
 
     //addUser: userservice
-    this.userService.addUser(this.user).subscribe(
-      (data)=>{
-        console.log(data);
-        alert('success');
-      },
-      (error)=>{
-        console.log(error);
-        alert('Something went wrong');
-      }
-    )
+    // this._userService.addUser(this.user).subscribe(
+    //   (data)=>{
+    //     console.log(data);
+    //     //alert('success');
+    //     Swal.fire('Sucess','User Successfully is Registered');
+    //   },
+    //   (error)=>{
+    //     console.log(error);
+    //     //alert('Something went wrong');
+    //     this.snack.open('Something went wrong','',{
+    //       duration:3000
+    //     })
+    //   }
+    // )
 
   }
 }
