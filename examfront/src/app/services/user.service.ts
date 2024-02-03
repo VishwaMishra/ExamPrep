@@ -8,8 +8,7 @@ import baseUrl from './helper';
 export class UserService {
 
   constructor(
-    private http:HttpClient,
-    private user:UserService,
+    private http:HttpClient
   ) { }
 
   //ADD USER

@@ -5,13 +5,14 @@ import { MatInputModule } from '@angular/material/input';
 import { UserService } from '../../services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
   imports: [MatInputModule,
     MatFormFieldModule,
-    FormsModule,
+    FormsModule
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'

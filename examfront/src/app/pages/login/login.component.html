@@ -10,12 +10,12 @@
             </div>
             <div class="col-md-6">
                 <h2>Login</h2>
-                <form (onSubmit)="formSubmit()">
+                <form (ngSubmit)="formSubmit()">
                     
                         <mat-form-field class="full-width" appearance="outline" >
                           <mat-label>User Name</mat-label>
                           <input 
-                          [(ngModel)]="user.username"
+                          [(ngModel)]="loginData.username"
                           name="User Name"
                           matInput 
                           placeholder="Enter your username"/>
@@ -24,7 +24,7 @@
                         <mat-form-field class="full-width" appearance="outline" >
                             <mat-label>Password</mat-label>
                             <input 
-                            [(ngModel)]="user.password"
+                            [(ngModel)]="loginData.password"
                             name="Password"
                             type="password" matInput placeholder="Enter your Password">
                         </mat-form-field>
