@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
